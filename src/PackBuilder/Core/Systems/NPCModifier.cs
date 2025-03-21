@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using PackBuilder.Common.JsonBuilding.NPCs;
 using System.Collections.Generic;
-using System.Collections.Immutable;
+using System.Collections.Frozen;
 using System.Linq;
 using System.Text;
 using Terraria;
@@ -11,7 +11,7 @@ namespace PackBuilder.Core.Systems
 {
     internal class PackBuilderNPC : GlobalNPC
     {
-        public static ImmutableDictionary<int, List<NPCChanges>>? NPCModSets = null;
+        public static FrozenDictionary<int, List<NPCChanges>>? NPCModSets = null;
 
         public override void SetDefaults(NPC entity)
         {
@@ -28,6 +28,7 @@ namespace PackBuilder.Core.Systems
 
     internal class NPCModifier : ModSystem
     {
+        
         public override void PostSetupContent()
         {
             // Collects ALL .npcmod.json files from all mods into a list.
@@ -49,7 +50,7 @@ namespace PackBuilder.Core.Systems
             foreach (var jsonEntry in jsonEntries)
             {
                 // Convert the raw bytes into raw text.
-                string rawJson = Encoding.Default.GetString(jsonEntry);
+                string rawJson = Encoding.UTF8.GetString(jsonEntry);
 
                 // Decode the json into an NPC mod.
                 NPCMod npcMod = JsonConvert.DeserializeObject<NPCMod>(rawJson)!;
@@ -65,7 +66,7 @@ namespace PackBuilder.Core.Systems
             }
 
             // Setup the factory for fast access to NPC lookup.
-            PackBuilderNPC.NPCModSets = factorySets.ToImmutableDictionary();
+            PackBuilderNPC.NPCModSets = factorySets.ToFrozenDictionary();
         }
     }
 }

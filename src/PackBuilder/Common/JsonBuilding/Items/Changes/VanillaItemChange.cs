@@ -1,62 +1,39 @@
-﻿using Terraria;
+﻿using PackBuilder.Common.JsonBuilding.Data;
+using Terraria;
 
 namespace PackBuilder.Common.JsonBuilding.Items.Changes
 {
     internal class VanillaItemChange : IItemChange
     {
-        public string? Damage { get; set; }
-        public string? CritRate { get; set; }
-        public string? Defense { get; set; }
-        public string? HammerPower { get; set; }
-        public string? PickaxePower { get; set; }
-        public string? AxePower { get; set; }
-        public string? Healing { get; set; }
-        public string? ManaRestoration { get; set; }
-        public string? Knockback { get; set; }
-        public string? LifeRegen { get; set; }
-        public string? ManaCost { get; set; }
-        public string? ShootSpeed { get; set; }
-        public string? UseTime { get; set; }
+        public ValueModifier Damage { get; set; }
+        public ValueModifier CritRate { get; set; }
+        public ValueModifier Defense { get; set; }
+        public ValueModifier HammerPower { get; set; }
+        public ValueModifier PickaxePower { get; set; }
+        public ValueModifier AxePower { get; set; }
+        public ValueModifier Healing { get; set; }
+        public ValueModifier ManaRestoration { get; set; }
+        public ValueModifier Knockback { get; set; }
+        public ValueModifier LifeRegen { get; set; }
+        public ValueModifier ManaCost { get; set; }
+        public ValueModifier ShootSpeed { get; set; }
+        public ValueModifier UseTime { get; set; }
 
         public void ApplyTo(Item item)
         {
-            static void DeltaF(ref float field, string? adjustment)
-            {
-                if (adjustment is null)
-                    return;
-
-                if (adjustment.StartsWith('+'))
-                    field += float.Parse(adjustment.Substring(1));
-
-                else if (adjustment.StartsWith('-'))
-                    field += float.Parse(adjustment);
-
-                else if (adjustment.StartsWith('x'))
-                    field *= float.Parse(adjustment.Substring(1));
-
-                else
-                    field = float.Parse(adjustment);
-            }
-            static void Delta(ref int field, string? adjustment)
-            {
-                float val = field;
-                DeltaF(ref val, adjustment);
-                field = (int)val;
-            }
-
-            Delta(ref item.damage, Damage);
-            Delta(ref item.crit, CritRate);
-            Delta(ref item.defense, Defense);
-            Delta(ref item.hammer, HammerPower);
-            Delta(ref item.pick, PickaxePower);
-            Delta(ref item.axe, AxePower);
-            Delta(ref item.healLife, Healing);
-            Delta(ref item.healMana, ManaRestoration);
-            DeltaF(ref item.knockBack, Knockback);
-            Delta(ref item.lifeRegen, LifeRegen);
-            Delta(ref item.mana, ManaCost);
-            DeltaF(ref item.shootSpeed, ShootSpeed);
-            Delta(ref item.useTime, UseTime);
+            this.Damage.ApplyTo(ref item.damage);
+            this.Damage.ApplyTo(ref item.crit);
+            this.Damage.ApplyTo(ref item.defense);
+            this.Damage.ApplyTo(ref item.hammer);
+            this.Damage.ApplyTo(ref item.pick);
+            this.Damage.ApplyTo(ref item.axe);
+            this.Damage.ApplyTo(ref item.healLife);
+            this.Damage.ApplyTo(ref item.healMana);
+            this.Damage.ApplyTo(ref item.knockBack);
+            this.Damage.ApplyTo(ref item.lifeRegen);
+            this.Damage.ApplyTo(ref item.mana);
+            this.Damage.ApplyTo(ref item.shootSpeed);
+            this.Damage.ApplyTo(ref item.useTime);
         }
     }
 }
