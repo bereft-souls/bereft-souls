@@ -1,0 +1,10 @@
+{
+	"Item": "Terraria/TerraBlade",
+	
+	"Changes": {
+		"Terraria": {
+			"Damage": "+100",
+			"UseTime": "-2"
+		}
+	}
+}

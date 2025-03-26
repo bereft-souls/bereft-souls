@@ -1,6 +1,6 @@
 displayName = tPackBuilder
 author = Bereft Souls Team
-version = 1.0.0
+version = 1.1.0
 homepage = https://github.com/bereft-souls/bereft-souls/tree/master/src/PackBuilder
 
 weakReferences = CalamityMod@2.0.4.5

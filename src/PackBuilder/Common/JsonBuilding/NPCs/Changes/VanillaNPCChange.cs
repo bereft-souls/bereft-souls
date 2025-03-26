@@ -1,4 +1,4 @@
-﻿using PackBuilder.Common.JsonBuilding.Data;
+﻿using PackBuilder.Common.JsonBuilding.DataStructures;
 using Terraria;
 
 namespace PackBuilder.Common.JsonBuilding.NPCs.Changes

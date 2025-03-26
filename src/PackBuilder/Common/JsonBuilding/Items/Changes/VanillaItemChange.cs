@@ -1,4 +1,4 @@
-﻿using PackBuilder.Common.JsonBuilding.Data;
+﻿using PackBuilder.Common.JsonBuilding.DataStructures;
 using Terraria;
 
 namespace PackBuilder.Common.JsonBuilding.Items.Changes
@@ -22,18 +22,18 @@ namespace PackBuilder.Common.JsonBuilding.Items.Changes
         public void ApplyTo(Item item)
         {
             this.Damage.ApplyTo(ref item.damage);
-            this.Damage.ApplyTo(ref item.crit);
-            this.Damage.ApplyTo(ref item.defense);
-            this.Damage.ApplyTo(ref item.hammer);
-            this.Damage.ApplyTo(ref item.pick);
-            this.Damage.ApplyTo(ref item.axe);
-            this.Damage.ApplyTo(ref item.healLife);
-            this.Damage.ApplyTo(ref item.healMana);
-            this.Damage.ApplyTo(ref item.knockBack);
-            this.Damage.ApplyTo(ref item.lifeRegen);
-            this.Damage.ApplyTo(ref item.mana);
-            this.Damage.ApplyTo(ref item.shootSpeed);
-            this.Damage.ApplyTo(ref item.useTime);
+            this.CritRate.ApplyTo(ref item.crit);
+            this.Defense.ApplyTo(ref item.defense);
+            this.HammerPower.ApplyTo(ref item.hammer);
+            this.PickaxePower.ApplyTo(ref item.pick);
+            this.AxePower.ApplyTo(ref item.axe);
+            this.Healing.ApplyTo(ref item.healLife);
+            this.ManaRestoration.ApplyTo(ref item.healMana);
+            this.Knockback.ApplyTo(ref item.knockBack);
+            this.LifeRegen.ApplyTo(ref item.lifeRegen);
+            this.ManaCost.ApplyTo(ref item.mana);
+            this.ShootSpeed.ApplyTo(ref item.shootSpeed);
+            this.UseTime.ApplyTo(ref item.useTime);
         }
     }
 }

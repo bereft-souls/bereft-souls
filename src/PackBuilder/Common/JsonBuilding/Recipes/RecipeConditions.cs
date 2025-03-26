@@ -30,9 +30,6 @@ internal class RecipeConditions
     /// </summary>
     public bool AppliesTo(Recipe recipe, RecipeCriteria criteria)
     {
-        if (Conditions.Count == 0)
-            throw new MissingFieldException("Must specify 1 or more conditions for a recipe modification!", nameof(Conditions));
-
         if (criteria == RecipeCriteria.Any)
             return Conditions.Any(c => c.AppliesTo(recipe));
 

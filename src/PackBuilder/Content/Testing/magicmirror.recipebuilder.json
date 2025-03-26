@@ -1,0 +1,21 @@
+{
+	"Result": {
+		"Item": "Terraria/MagicMirror"
+	},
+	
+	"Ingredient": {
+		"Item": "Terraria/Glass",
+		"Count": 5
+	},
+	
+	"GroupIngredient": {
+		"Group": "IronBar",
+		"Count": 8
+	},
+	
+	"Ingredient": {
+		"Item": "Terraria/ManaCrystal"
+	},
+	
+	"Tile": "Terraria/Anvils"
+}

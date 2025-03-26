@@ -1,5 +1,5 @@
 ﻿using CalamityMod;
-using PackBuilder.Common.JsonBuilding.Data;
+using PackBuilder.Common.JsonBuilding.DataStructures;
 using Terraria;
 using Terraria.ModLoader;
 

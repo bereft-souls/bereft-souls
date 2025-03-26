@@ -27,13 +27,13 @@ namespace PackBuilder.Core.Utils
             try
             {
                 if (mod == "Terraria")
-                    return (short)typeof(NPCID).GetField(name).GetRawConstantValue();
+                    return (short)(typeof(NPCID).GetField(name)?.GetRawConstantValue() ?? throw new Exception());
 
                 return ModContent.Find<ModNPC>(mod, name).Type;
             }
             catch
             {
-                throw new ArgumentException($"NPC type \"{npc}\" not found!", nameof(npc));
+                throw new HideStackTraceException($"NPC type \"{npc}\" not found!");
             }
         }
 
@@ -47,13 +47,13 @@ namespace PackBuilder.Core.Utils
             try
             {
                 if (mod == "Terraria")
-                    return (short)typeof(ItemID).GetField(name)!.GetRawConstantValue()!;
+                    return (short)(typeof(ItemID).GetField(name)?.GetRawConstantValue() ?? throw new Exception());
 
                 return ModContent.Find<ModItem>(mod, name).Type;
             }
             catch
             {
-                throw new ArgumentException($"Item type \"{item}\" not found!", nameof(item));
+                throw new HideStackTraceException($"Item type \"{item}\" not found!");
             }
         }
 
@@ -70,13 +70,13 @@ namespace PackBuilder.Core.Utils
             try
             {
                 if (mod == "Terraria")
-                    return (short)typeof(ProjectileID).GetField(name)!.GetRawConstantValue()!;
+                    return (short)(typeof(ProjectileID).GetField(name)?.GetRawConstantValue() ?? throw new Exception());
 
                 return ModContent.Find<ModProjectile>(mod, name).Type;
             }
             catch
             {
-                throw new ArgumentException($"Projectile type \"{projectile}\" not found!", nameof(projectile));
+                throw new HideStackTraceException($"Projectile type \"{projectile}\" not found!");
             }
         }
 
@@ -90,13 +90,13 @@ namespace PackBuilder.Core.Utils
             try
             {
                 if (mod == "Terraria")
-                    return (ushort)typeof(TileID).GetField(name).GetRawConstantValue();
+                    return (ushort)(typeof(TileID).GetField(name)?.GetRawConstantValue() ?? throw new Exception());
 
                 return ModContent.Find<ModTile>(mod, name).Type;
             }
             catch
             {
-                throw new ArgumentException($"Tyle type \"{tile}\" not found!", nameof(tile));
+                throw new HideStackTraceException($"Tyle type \"{tile}\" not found!");
             }
         }
 
@@ -106,7 +106,7 @@ namespace PackBuilder.Core.Utils
         public static int GetRecipeGroup(string group)
         {
             if (!RecipeGroup.recipeGroupIDs.TryGetValue(group, out int id))
-                throw new ArgumentException($"Recipe group \"{group}\" not found!", nameof(group));
+                throw new HideStackTraceException($"Recipe group \"{group}\" not found!");
 
             return id;
         }

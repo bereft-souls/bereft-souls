@@ -3,7 +3,7 @@ using System.Globalization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace PackBuilder.Common.JsonBuilding.Data;
+namespace PackBuilder.Common.JsonBuilding.DataStructures;
 
 /// <summary>
 /// Type specifier for value modification.

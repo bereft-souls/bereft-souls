@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using PackBuilder.Common.JsonBuilding.Items;
+using System.Collections.Frozen;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
 using Terraria;
@@ -11,7 +11,7 @@ namespace PackBuilder.Core.Systems
 {
     internal class PackBuilderItem : GlobalItem
     {
-        public static ImmutableDictionary<int, List<ItemChanges>>? ItemModSets = null;
+        public static FrozenDictionary<int, List<ItemChanges>>? ItemModSets = null;
 
         public override void SetDefaults(Item entity)
         {
@@ -25,7 +25,7 @@ namespace PackBuilder.Core.Systems
         public override void PostSetupContent()
         {
             // Collects ALL .itemmod.json files from all mods into a list.
-            List<byte[]> jsonEntries = [];
+            Dictionary<string, byte[]> jsonEntries = [];
 
             // Collects the loaded item mods to pass to the set factory initialization.
             Dictionary<int, List<ItemChanges>> factorySets = [];
@@ -37,16 +37,21 @@ namespace PackBuilder.Core.Systems
 
                 // Adds the byte contents of each file to the list.
                 foreach (var file in files)
-                    jsonEntries.Add(mod.GetFileBytes(file));
+                    jsonEntries.Add(file, mod.GetFileBytes(file));
             }
 
             foreach (var jsonEntry in jsonEntries)
             {
+                PackBuilder.LoadingFile = jsonEntry.Key;
+
                 // Convert the raw bytes into raw text.
-                string rawJson = Encoding.Default.GetString(jsonEntry);
+                string rawJson = Encoding.Default.GetString(jsonEntry.Value);
 
                 // Decode the json into an item mod.
-                ItemMod itemMod = JsonConvert.DeserializeObject<ItemMod>(rawJson)!;
+                ItemMod itemMod = JsonConvert.DeserializeObject<ItemMod>(rawJson, PackBuilder.JsonSettings)!;
+
+                if (itemMod.Items.Count == 0)
+                    throw new NoItemsException();
 
                 // Get the item mod ready for factory initialization.
                 foreach (string item in itemMod.Items)
@@ -56,10 +61,12 @@ namespace PackBuilder.Core.Systems
                     factorySets.TryAdd(itemType, []);
                     factorySets[itemType].Add(itemMod.Changes);
                 }
+
+                PackBuilder.LoadingFile = null;
             }
 
             // Setup the factory for fast access to item lookup.
-            PackBuilderItem.ItemModSets = factorySets.ToImmutableDictionary();
+            PackBuilderItem.ItemModSets = factorySets.ToFrozenDictionary();
         }
     }
 }
