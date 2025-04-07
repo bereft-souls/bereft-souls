@@ -1,3 +1,4 @@
+global using LumUtils = Luminance.Common.Utilities.Utilities;
 using BereftSouls.Common;
 using JetBrains.Annotations;
 
