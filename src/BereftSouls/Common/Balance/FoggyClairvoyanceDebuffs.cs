@@ -26,9 +26,10 @@ namespace BereftSouls.Common.Balance
         public delegate void Orig_UpdateAccessory(FoggyClairvoyance self, Player player, bool hideVisual);
         private static void UpdateAccessory_Detour(Orig_UpdateAccessory orig, FoggyClairvoyance self, Player player, bool hideVisual)
         {
-            if (player.buffImmune.Clone() is not bool[] wasImmune)
-                return;
+            bool[]? wasImmune = player.buffImmune.Clone() as bool[];
             orig(self, player, hideVisual);
+            if (wasImmune == null) // this should be impossible but still
+                return;
             // prevent item from granting immunity to non-SotS modded buffs
             for (int i = 0; i < player.buffImmune.Length; i++)
             {
