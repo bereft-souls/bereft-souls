@@ -25,5 +25,5 @@ Upcoming features:
 To learn how to utilize tPackBuilder to build your own modpacks, head on over to the documentation folder!
 
 > Quick reference:
-> - [Recipes](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/Recipes.md)
-> - [NPCs](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/NPCs.md)
+> - [Recipe Modification](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/RecipeModification.md)
+> - [NPC Modification](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/NPCModification.md)
