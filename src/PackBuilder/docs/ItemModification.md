@@ -4,7 +4,7 @@ tPackBuilder adds support for dynamically modifying aspects of items, such as da
 
 All you need to do is add a `.itemmod.json` file to your mod's folder, add the required data, and tPackBuilder handles the rest!
 
-> Quick link to [avilable conditions/changes](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/NPCs.md#available-changes) at the bottom.
+> Quick link to [avilable conditions/changes](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/ItemModification.md#available-changes) at the bottom.
 
 ## Pre-requisites
 
@@ -26,7 +26,7 @@ You can add multiple `.itemmod.json` files to your mod's folder and each one wil
 ***
 
 ### Walkthrough
-> This section is a step-by-step guide to setting up your first item modification, and a breakdown of how modifications are formatted. If you want to skip straight to see what options are available, jump to the [documentation](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/NPCs.md#available-changes) at the bottom of this file.
+> This section is a step-by-step guide to setting up your first item modification, and a breakdown of how modifications are formatted. If you want to skip straight to see what options are available, jump to the [documentation](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/ItemModification.md#available-changes) at the bottom of this file.
 
 To get started, lets create a modification that buffs the cooper shortsword to have 100 damage and a use time of 3 frames..
 
