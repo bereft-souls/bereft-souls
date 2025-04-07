@@ -122,8 +122,8 @@ A full list of available changes and what value you should assign them can be fo
 ### Calamity Mod (CalamityMod)
 | Change Name | Description | Acceptable Values | Example |
 | ----------- | ----------- | ----------------- | ------- |
-| MaxCharge | The maximum charge value of this item. | Positive decimals | ![image](https://github.com/user-attachments/assets/5d7e803c-3a44-4e9f-aaf4-75560cc1babe) |
-| ChargePerUse | The amount of charge that is consumed every time the item is used. | Positive decimals | ![image](https://github.com/user-attachments/assets/5d7e803c-3a44-4e9f-aaf4-75560cc1babe) |
-| ChargePerAltUse | The amount of charge that is consumed every time this item is used with right click.<br/>In most cases this does not need to be set and will default to the value of `ChargePerUse`. | Positive decimals | ![image](https://github.com/user-attachments/assets/5d7e803c-3a44-4e9f-aaf4-75560cc1babe) |
+| MaxCharge | The maximum charge value of this item. | Positive decimals | IMAGE |
+| ChargePerUse | The amount of charge that is consumed every time the item is used. | Positive decimals | IMAGE |
+| ChargePerAltUse | The amount of charge that is consumed every time this item is used with right click.<br/>In most cases this does not need to be set and will default to the value of `ChargePerUse`. | Positive decimals | IMAGE |
 
 If there are any changes you would like to see support added for, whether it be from Vanilla or other mods, reach out to @nycro on Discord!
