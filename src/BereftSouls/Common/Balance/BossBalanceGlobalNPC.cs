@@ -1,13 +1,18 @@
 ﻿using CalamityMod;
+using SOTS.Items.Celestial;
+using SOTS.NPCs;
 using SOTS.NPCs.Boss;
+using SOTS.NPCs.Boss.Advisor;
 using SOTS.NPCs.Boss.Curse;
 using SOTS.NPCs.Boss.Glowmoth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
@@ -59,6 +64,23 @@ namespace BereftSouls.Common.Balance
                 calNPC.VulnerableToSickness = false;
             }
 
+            // advisor
+            if (npc.type == NPCType<TheAdvisorHead>())
+            {
+                // stats also need to be scaled in detour because of how the boss works
+                npc.lifeMax = 17000; // base is 12500
+                npc.damage = 62; // base is 54
+                calNPC.VulnerableToElectricity = true;
+                calNPC.VulnerableToSickness = false;
+            }
+            if (npc.type == NPCType<PhaseEye>())
+            {
+                npc.lifeMax = 68;
+                npc.damage = 58;
+                calNPC.VulnerableToElectricity = true;
+                calNPC.VulnerableToSickness = false;
+            }
+
             // Calamity boss health boost config compatibility
             if (!Main.gameMenu && CalamityConfig.Instance != null && npc.boss && npc.ModNPC != null && npc.ModNPC.Mod != null && (npc.ModNPC.Mod == ModCompatibility.SOTS.Mod))
             {
@@ -66,6 +88,22 @@ namespace BereftSouls.Common.Balance
                 float HPBoost = CalamityConfig.Instance.BossHealthBoost * 0.01f;
                 npc.lifeMax += (int)(npc.lifeMax * HPBoost);
             }
+        }
+
+        private static readonly MethodInfo? Advisor_ScaleExpertStatsMethod = typeof(TheAdvisorHead).GetMethod("ScaleExpertStats", LumUtils.UniversalBindingFlags);
+        public override void Load()
+        {
+            if (Advisor_ScaleExpertStatsMethod != null)
+                MonoModHooks.Add(Advisor_ScaleExpertStatsMethod, Advisor_ScaleExpertStats_Detour);
+
+        }
+        public delegate void Orig_Advisor_ScaleExpertStats(TheAdvisorHead self);
+        private static void Advisor_ScaleExpertStats_Detour(Orig_Advisor_ScaleExpertStats orig, TheAdvisorHead self)
+        {
+            orig(self);
+            self.NPC.life = self.NPC.lifeMax = 17000; // base is 12500
+            self.NPC.damage = 62; // base is 54
+            self.NPC.ScaleStats(null, Main.GameModeInfo, null);
         }
     }
 }
