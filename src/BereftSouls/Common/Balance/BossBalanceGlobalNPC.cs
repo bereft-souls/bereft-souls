@@ -5,6 +5,7 @@ using SOTS.NPCs.Boss;
 using SOTS.NPCs.Boss.Advisor;
 using SOTS.NPCs.Boss.Curse;
 using SOTS.NPCs.Boss.Glowmoth;
+using SOTS.NPCs.Boss.Lux;
 using SOTS.NPCs.Boss.Polaris;
 using SOTS.NPCs.Boss.Polaris.NewPolaris;
 using System;
@@ -83,6 +84,7 @@ namespace BereftSouls.Common.Balance
                 calNPC.VulnerableToSickness = false;
             }
 
+            // polaris
             if (npc.type == NPCType<Polaris>() || npc.type == NPCType<NewPolaris>())
             {
                 npc.lifeMax = 80000;
@@ -92,6 +94,17 @@ namespace BereftSouls.Common.Balance
                 calNPC.VulnerableToHeat = true;
                 calNPC.VulnerableToCold = false;
                 calNPC.VulnerableToSickness = false;
+            }
+
+            // lux
+            if (npc.type == NPCType<Lux>())
+            {
+                npc.lifeMax = 68000;
+                npc.damage = 112;
+            }
+            if (npc.type == NPCType<FakeLux>())
+            {
+                npc.damage = 100;
             }
 
             // Calamity boss health boost config compatibility
