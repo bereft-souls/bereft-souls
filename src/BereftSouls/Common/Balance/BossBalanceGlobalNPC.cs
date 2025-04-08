@@ -5,6 +5,8 @@ using SOTS.NPCs.Boss;
 using SOTS.NPCs.Boss.Advisor;
 using SOTS.NPCs.Boss.Curse;
 using SOTS.NPCs.Boss.Glowmoth;
+using SOTS.NPCs.Boss.Polaris;
+using SOTS.NPCs.Boss.Polaris.NewPolaris;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -81,6 +83,17 @@ namespace BereftSouls.Common.Balance
                 calNPC.VulnerableToSickness = false;
             }
 
+            if (npc.type == NPCType<Polaris>() || npc.type == NPCType<NewPolaris>())
+            {
+                npc.lifeMax = 80000;
+                npc.damage = 85;
+                CalamityMod.ModCalls.SetDefenseDamageNPC(npc, true);
+                calNPC.VulnerableToElectricity = true;
+                calNPC.VulnerableToHeat = true;
+                calNPC.VulnerableToCold = false;
+                calNPC.VulnerableToSickness = false;
+            }
+
             // Calamity boss health boost config compatibility
             if (!Main.gameMenu && CalamityConfig.Instance != null && npc.boss && npc.ModNPC != null && npc.ModNPC.Mod != null && (npc.ModNPC.Mod == ModCompatibility.SOTS.Mod))
             {
@@ -102,8 +115,14 @@ namespace BereftSouls.Common.Balance
         {
             orig(self);
             self.NPC.life = self.NPC.lifeMax = 17000; // base is 12500
+
+            float HPBoost = CalamityConfig.Instance.BossHealthBoost * 0.01f;
+            self.NPC.lifeMax += (int)(self.NPC.lifeMax * HPBoost);
+
             self.NPC.damage = 62; // base is 54
             self.NPC.ScaleStats(null, Main.GameModeInfo, null);
+
+
         }
     }
 }
