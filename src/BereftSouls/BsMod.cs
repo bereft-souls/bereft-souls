@@ -10,8 +10,4 @@ namespace BereftSouls;
 public sealed class BsMod : Mod
 {
     internal static BsMod Instance;
-    public override void Load()
-    {
-        ModCompatibility.BossChecklist.AdjustValues();
-    }
 }

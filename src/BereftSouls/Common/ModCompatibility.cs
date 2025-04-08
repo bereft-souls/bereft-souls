@@ -20,9 +20,9 @@ public static class ModCompatibility
             }
         }
     }
-    public static class BossChecklist
+    public class BossChecklist : ModSystem
     {
-        public static void AdjustValues()
+        public override void PostSetupContent()
         {
             
         }
