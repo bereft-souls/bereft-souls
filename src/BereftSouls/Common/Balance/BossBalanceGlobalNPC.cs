@@ -1,4 +1,5 @@
 ﻿using CalamityMod;
+using SOTS.NPCs.Boss.Curse;
 using SOTS.NPCs.Boss.Glowmoth;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,15 @@ namespace BereftSouls.Common.Balance
                 // one singular projectile, spawned from glowmoth minion, has explicitly typed damage
                 // this applies to the rest of the fight's projectiles
                 npc.damage = 45;
+            }
+            if (npc.type == NPCType<PharaohsCurse>())
+            {
+                npc.lifeMax = 4200; // base is 4000
+                npc.damage = 50;
+                CalamityMod.ModCalls.SetDefenseDamageNPC(npc, true);
+                calNPC.VulnerableToCold = true;
+                calNPC.VulnerableToHeat = false;
+                calNPC.VulnerableToSickness = false;
             }
 
             // Calamity boss health boost config compatibility
