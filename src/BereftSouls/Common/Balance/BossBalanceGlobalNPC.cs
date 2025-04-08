@@ -1,4 +1,5 @@
 ﻿using CalamityMod;
+using SOTS.NPCs.Boss;
 using SOTS.NPCs.Boss.Curse;
 using SOTS.NPCs.Boss.Glowmoth;
 using System;
@@ -19,6 +20,7 @@ namespace BereftSouls.Common.Balance
         {
             var calNPC = npc.Calamity();
 
+            // glowmoth
             if (npc.type == NPCType<Glowmoth>())
             {
                 npc.lifeMax = 4200;
@@ -30,6 +32,23 @@ namespace BereftSouls.Common.Balance
                 // this applies to the rest of the fight's projectiles
                 npc.damage = 45;
             }
+
+            // putrid pinky
+            if (npc.type == NPCType<PutridPinkyPhase2>())
+            {
+                npc.lifeMax = 6875; // base is 5000
+            }
+            if (npc.type == NPCType<PutridHook>())
+            {
+                npc.lifeMax = 500; // base is 400
+            }
+            if (npc.type == NPCType<PutridPinky1>() || npc.type == NPCType<PutridPinkyPhase2>() || npc.type == NPCType<PutridHook>())
+            {
+                npc.damage = 50;
+                calNPC.VulnerableToSickness = false;
+                calNPC.VulnerableToHeat = true;
+            }
+            // pharaoh
             if (npc.type == NPCType<PharaohsCurse>())
             {
                 npc.lifeMax = 4200; // base is 4000
