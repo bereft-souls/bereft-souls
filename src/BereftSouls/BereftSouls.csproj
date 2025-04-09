@@ -3,8 +3,7 @@
     <Import Project="../common/Mod.targets"/>
 
     <ItemGroup>
-        <ProjectReference Include="..\FargosSotsPyramid\FargosSotsPyramid.csproj"/>
-        <ProjectReference Include="..\refs\FargowiltasCrossmod.csproj"/>
+        <ProjectReference Include="..\BereftCompatibility\BereftCompatibility.csproj"/>
     </ItemGroup>
 
 </Project>

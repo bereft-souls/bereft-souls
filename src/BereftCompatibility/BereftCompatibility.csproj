@@ -2,4 +2,10 @@
 
     <Import Project="../common/Mod.targets"/>
 
+    <ItemGroup>
+        <ProjectReference Include="..\refs\FargowiltasCrossmod.csproj"/>
+        <ProjectReference Include="..\refs\SOTS.csproj"/>
+        <ProjectReference Include="..\refs\Luminance.csproj"/>
+    </ItemGroup>
+
 </Project>

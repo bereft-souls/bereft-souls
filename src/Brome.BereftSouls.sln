@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BereftSouls", "BereftSouls\BereftSouls.csproj", "{031D99D1-7714-4C5E-9AEF-6893320BCBFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FargosSotsPyramid", "FargosSotsPyramid\FargosSotsPyramid.csproj", "{2BEB69C1-6A49-4B01-AFB0-5FD181C22E24}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackBuilder", "PackBuilder\PackBuilder.csproj", "{C4E54FCE-2FE1-4414-BAC7-ED028428ADE1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "refs", "refs", "{D261F1C5-E8C4-48EA-91D3-500ABDDB4389}"
@@ -45,10 +43,6 @@ Global
 		{031D99D1-7714-4C5E-9AEF-6893320BCBFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{031D99D1-7714-4C5E-9AEF-6893320BCBFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{031D99D1-7714-4C5E-9AEF-6893320BCBFF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2BEB69C1-6A49-4B01-AFB0-5FD181C22E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2BEB69C1-6A49-4B01-AFB0-5FD181C22E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2BEB69C1-6A49-4B01-AFB0-5FD181C22E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BEB69C1-6A49-4B01-AFB0-5FD181C22E24}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C4E54FCE-2FE1-4414-BAC7-ED028428ADE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C4E54FCE-2FE1-4414-BAC7-ED028428ADE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4E54FCE-2FE1-4414-BAC7-ED028428ADE1}.Release|Any CPU.ActiveCfg = Release|Any CPU

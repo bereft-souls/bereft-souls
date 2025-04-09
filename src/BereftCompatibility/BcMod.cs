@@ -2,7 +2,7 @@ using JetBrains.Annotations;
 
 using Terraria.ModLoader;
 
-namespace BereftSouls;
+namespace BereftCompatibility;
 
 [UsedImplicitly(ImplicitUseKindFlags.InstantiatedWithFixedConstructorSignature)]
-public sealed class BsMod : Mod;
+public sealed class BcMod : Mod;

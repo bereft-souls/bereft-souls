@@ -4,7 +4,7 @@
 
     <PropertyGroup>
         <LangVersion>latest</LangVersion>
-        <Nullable>enable</Nullable>
+        <!--<Nullable>enable</Nullable>-->
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 
         <EnableDefaultItems>false</EnableDefaultItems>
