@@ -3,6 +3,8 @@
 using JetBrains.Annotations;
 
 using SOTS.Items.Celestial;
+using SOTS.Items.Earth.Glowmoth;
+using SOTS.Items.Slime;
 
 using Terraria;
 using Terraria.Localization;
@@ -15,6 +17,30 @@ namespace BereftCompatibility.Common.Balance;
 [UsedImplicitly(ImplicitUseKindFlags.InstantiatedNoFixedConstructorSignature)]
 internal sealed class ItemBalance : GlobalItem
 {
+    private static readonly HashSet<int> summon_items =
+    [
+        ItemType<SuspiciousLookingCandle>(),
+        ItemType<JarOfPeanuts>(),
+    ];
+
+    public override void SetDefaults(Item entity)
+    {
+        base.SetDefaults(entity);
+
+        // Make uncomsumable like Calamity's edits to boss summons.
+        if (summon_items.Contains(entity.type))
+        {
+            entity.maxStack   = 1;
+            entity.consumable = false;
+
+            // Calamity additionally makes this change, for some reason.  We
+            // won't do this because it causes items to be used multiple times
+            // if the useAnimation value is greater than useTime.  Seems
+            // pointless.
+            // entity.useTime = 10;
+        }
+    }
+
     public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
     {
         var balanceLine = Language.GetTextValue("Mods.FargowiltasCrossmod.EModeBalance.CrossBalanceGeneric");
