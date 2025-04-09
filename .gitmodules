@@ -16,3 +16,6 @@
 [submodule "src/refs/StructureHelper"]
 	path = src/refs/StructureHelper
 	url = https://github.com/ScalarVector1/StructureHelper
+[submodule "src/refs/FargowiltasCrossmod"]
+	path = src/refs/FargowiltasCrossmod
+	url = https://github.com/JavyzTaken/FargowiltasCrossmod.git

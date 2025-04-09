@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditDecompiler", "EditDecom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestBooks", "QuestBooks\QuestBooks.csproj", "{AA36357E-3CCC-4C2F-9633-223738C4DFC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FargowiltasCrossmod", "refs\FargowiltasCrossmod.csproj", "{2AF2DF9C-204F-404B-9A80-19D2DDD71A17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{AA36357E-3CCC-4C2F-9633-223738C4DFC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA36357E-3CCC-4C2F-9633-223738C4DFC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA36357E-3CCC-4C2F-9633-223738C4DFC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF2DF9C-204F-404B-9A80-19D2DDD71A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF2DF9C-204F-404B-9A80-19D2DDD71A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF2DF9C-204F-404B-9A80-19D2DDD71A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF2DF9C-204F-404B-9A80-19D2DDD71A17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,5 +94,6 @@ Global
 		{8F216512-C4FB-4C5C-8B90-42D8213AF783} = {D261F1C5-E8C4-48EA-91D3-500ABDDB4389}
 		{121BB5C1-5CA2-4E91-AA4B-43043F54754B} = {D261F1C5-E8C4-48EA-91D3-500ABDDB4389}
 		{D70B0553-E243-4BEB-924E-9E4273876585} = {D261F1C5-E8C4-48EA-91D3-500ABDDB4389}
+		{2AF2DF9C-204F-404B-9A80-19D2DDD71A17} = {D261F1C5-E8C4-48EA-91D3-500ABDDB4389}
 	EndGlobalSection
 EndGlobal

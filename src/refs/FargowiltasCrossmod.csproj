@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\tModLoader.targets"/>
+
+    <PropertyGroup>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+
+        <EnableDefaultItems>false</EnableDefaultItems>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Include Remove="**/*"/>
+        <Compile Include="FargowiltasCrossmod/**/*.cs">
+            <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="Fargowiltas.csproj"/>
+        <ProjectReference Include="FargowiltasSouls.csproj"/>
+        <ProjectReference Include="Luminance.csproj"/>
+        <ProjectReference Include="CalamityMod.csproj"/>
+    </ItemGroup>
+
+    <Target Name="BuildMod"/>
+
+</Project>
