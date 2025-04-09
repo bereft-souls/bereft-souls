@@ -101,7 +101,7 @@ A full list of available changes and what value you should assign them can be fo
 | Change Name | Description | Acceptable Values | Example |
 | ----------- | ----------- | ----------------- | ------- |
 | `Damage` | The damage this item deals. | Positive integers | IMAGE |
-| `Piercing` | The number of times this projectile can pierce.<br/>SSet to -1 for infinite piercing. | Integers | IMAGE |
+| `Piercing` | The number of times this projectile can pierce.<br/>Set to -1 for infinite piercing. | Integers | IMAGE |
 | `Scale` | The scale of the projectile. | Positive decimals | IMAGE |
 | `HitCooldown` | The number of i-frames this projectile grants enemies upon hitting them. | Integers | IMAGE |
 
