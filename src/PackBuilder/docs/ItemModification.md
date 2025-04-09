@@ -28,17 +28,17 @@ You can add multiple `.itemmod.json` files to your mod's folder and each one wil
 ### Walkthrough
 > This section is a step-by-step guide to setting up your first item modification, and a breakdown of how modifications are formatted. If you want to skip straight to see what options are available, jump to the [documentation](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/ItemModification.md#available-changes) at the bottom of this file.
 
-To get started, lets create a modification that buffs the cooper shortsword to have 100 damage and a use time of 3 frames..
+To get started, lets create a modification that buffs the Terrablade to have +100 damage and a use time that is 2 frames shorter.
 
-First, add a file to your mod's folder and rename it to `coppershortsowrd.itemmod.json`. The naming for this file doesn't matter to tPackBuilder, only that it ends with `.itemmod.json` - but we're going to call it `coppershortsword` to make it clear what this modification is for.
+First, add a file to your mod's folder and rename it to `terrablade.itemmod.json`. The naming for this file doesn't matter to tPackBuilder, only that it ends with `.itemmod.json` - but we're going to call it `terrablade` to make it clear what this modification is for.
 
-![image](https://github.com/user-attachments/assets/d73bb3db-6f70-4820-8d01-c49feab2258c)
+![image](https://github.com/user-attachments/assets/10d9a0ed-1d37-45c4-9f10-847ac48f7a79)
 
 Then, open up this file in your preferred text editor. This guide will be using Notepad++, as is recommended in the top section. This file should be empty by default.
 
 Start by adding a set of curly braces to your file. All of your modification's data will be filled into the braces. This is the default structure for .json objects.
 
-![image](https://github.com/user-attachments/assets/d6662f90-45b6-480c-8f3a-e84878212021)
+![image](https://github.com/user-attachments/assets/393ea366-0fbc-4d82-b499-d7cd0917bf02)
 
 Now we're going to begin actually filling in our modification's data. Item mods are broken down into 2 parts:
 - Item
@@ -50,7 +50,7 @@ Now we're going to begin actually filling in our modification's data. Item mods 
 
 You can begin setting up those parts like so:
 
-![image](https://github.com/user-attachments/assets/2a9119ce-75b7-4e97-b21a-c08a09c06564)
+![image](https://github.com/user-attachments/assets/6ca88a44-10cc-48fa-ac48-92e65a13058a)
 
 ### Item
 
@@ -58,11 +58,11 @@ Filling in the Item portion of the modification is very simple and self-explanat
 
 In this case, since the item is from vanilla, the mod is simply going to be `Terraria`.
 
-![image](https://github.com/user-attachments/assets/8e8206cd-431e-4e09-aab6-1a2da5966773)
+![image](https://github.com/user-attachments/assets/4ecb0f41-e8bf-4ff4-b31a-a3e60a8e8a65)
 
 If you want these changes to apply to multiple items, you can add the "Item" field multiple times.
 
-![image](https://github.com/user-attachments/assets/d2bdb308-a99a-4dec-93d2-468b8cf96af6)
+![image](https://github.com/user-attachments/assets/c9fb23dc-7548-4276-a76c-6ec1e76248ca)
 
 ### Changes
 
@@ -72,7 +72,7 @@ For example: damage, crit chance, use time, and a number of others are all contr
 
 Start by adding a section for the mod controlling the changes you want to change. Since we are only changing damage and use time, we only need a vanilla section. And remember that when something is from vanilla, we denote that by using `Terraria` as the mod name.
 
-![image](https://github.com/user-attachments/assets/f3dc6850-c653-4537-8551-0eff1aa6954f)
+![image](https://github.com/user-attachments/assets/8cc58951-6984-433e-ae10-9fda86d6175d)
 
 From here, we can start listing off our changes. When you want to change a value, you have 3 options:
 - Write a new value. This will assign the property to this new value.
@@ -81,20 +81,16 @@ From here, we can start listing off our changes. When you want to change a value
 - Write a value prefixed with a `x`. This will multiply the already in place value by your specified amount.
 > Note that some fields expect integers to be given as values. If you use decimals in these instances, whether it be setting the value directly or by performing an operation, the resulting numbers will be rounded towards 0.
 
-![image](https://github.com/user-attachments/assets/952a26ff-6b8d-409e-8893-205938dcf234)
+![image](https://github.com/user-attachments/assets/aade5958-9308-4703-93b2-992efae0ba6f)
 
-If we wanted to buff the item's damage by 10 points (ie. increase it by 10 points, not set it to 10), we could do this:
+If we wanted to set the item's damage to 100 (not add 100 to it, set it to exactly 100), we could do this:
 
-![image](https://github.com/user-attachments/assets/a5ed443c-44e2-4cbd-96f8-85829b1a653d)
+![image](https://github.com/user-attachments/assets/1483339c-8c1e-4e0b-8eb9-741969274958)
 
-And lastly, if we wanted to change the item's charge consumption in Calamity, we can do so like this:
-> Note this change will only work if the Calamity Mod is enabled.
+And just like that, we're done! If you head into the game and spawn a Terrablade, you should see it has the increased stats.
 
-![image](https://github.com/user-attachments/assets/54ee2e58-fce8-4df5-bf0b-6bb460f41b43)
+![image](https://github.com/user-attachments/assets/41d17956-42eb-416b-9ece-b735b5ed9a99) ![image](https://github.com/user-attachments/assets/de221786-f68d-4f77-a06b-e1b1e121cb22)
 
-And just like that, we're done! If you head into the game and spawn a copper shortsword, you should see it has the increased stats.
-
-![image](https://github.com/user-attachments/assets/2965b896-5c08-4930-bb5e-f355861c8a92)
 
 A full list of available changes and what value you should assign them can be found below. You can mix and match as many changes as you like - just make sure to follow the syntax above! Happy modpacking!
 
