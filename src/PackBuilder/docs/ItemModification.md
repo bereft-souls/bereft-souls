@@ -101,25 +101,25 @@ A full list of available changes and what value you should assign them can be fo
 ### Vanilla (Terraria)
 | Change Name | Description | Acceptable Values | Example |
 | ----------- | ----------- | ----------------- | ------- |
-| `Damage` | The damage this item deals. | Positive integers | IMAGE |
-| `CritRate` | The chance for this item to crit. | Positive integers | IMAGE |
-| `Defense` | The defense this item gives when equipped | Positive integers | IMAGE |
-| `HammerPower` | This item's hammer power. | Positive integers | IMAGE |
-| `PickaxePower` | This item's pickaxe power. | Positive integers | IMAGE |
-| `AxePower` | This item's axe power. | Positive integers | IMAGE |
-| `Healing` | The health this item restores when consumed. | Positive integers | IMAGE |
-| `ManaRestoration` | The mana this item restores when consumed. | Positive integers | IMAGE |
-| `Knockback` | This item's knockback. | Positive integers | IMAGE |
-| `LifeRegen` | The regeneration this item gives when equipped. | Positive integers | IMAGE |
-| `ManaCost` | The amount of mana that this item consumes when used. | Positive integers | IMAGE |
-| `ShootSpeed` | How fast the projectiles this item shoots will travel. | Positive integers | IMAGE |
-| `UseTime` | The number of frames this item takes before it can be used again. | Positive integers | IMAGE |
+| `Damage` | The damage this item deals. | Positive integers | ![image](https://github.com/user-attachments/assets/8bc24131-1eb6-4d71-9223-475e3ba26a00) |
+| `CritRate` | The chance for this item to crit. | Positive integers | ![image](https://github.com/user-attachments/assets/7ebffefa-839b-4261-8b76-31e44eaed7ca) |
+| `Defense` | The defense this item gives when equipped | Positive integers | ![image](https://github.com/user-attachments/assets/dce23677-8770-4e0a-8c51-873f7f8e17e5) |
+| `HammerPower` | This item's hammer power. | Positive integers | ![image](https://github.com/user-attachments/assets/111f7655-4d56-4bd7-8c14-868041a9bbdc) |
+| `PickaxePower` | This item's pickaxe power. | Positive integers | ![image](https://github.com/user-attachments/assets/9b6f2828-c46b-4206-9594-1d02cb6c4b64) |
+| `AxePower` | This item's axe power. | Positive integers | ![image](https://github.com/user-attachments/assets/dbc92290-db19-48bc-9e88-a98256f53884) |
+| `Healing` | The health this item restores when consumed. | Positive integers | ![image](https://github.com/user-attachments/assets/91e78ca9-9759-4001-8677-f189ed9e2b68) |
+| `ManaRestoration` | The mana this item restores when consumed. | Positive integers | ![image](https://github.com/user-attachments/assets/7de0eedc-ce1d-4cfd-a28b-0acc71820b69) |
+| `Knockback` | This item's knockback. | Positive decimals | ![image](https://github.com/user-attachments/assets/60703a4f-7847-44a8-8247-7df3dd59eb41) |
+| `LifeRegen` | The regeneration this item gives when equipped. | Positive integers | ![image](https://github.com/user-attachments/assets/70a13e3f-d9a8-4042-b649-a9dab610e243) |
+| `ManaCost` | The amount of mana that this item consumes when used. | Positive integers | ![image](https://github.com/user-attachments/assets/80dc7767-0846-45cb-9653-d824b8637aa6) |
+| `ShootSpeed` | How fast the projectiles this item shoots will travel. | Positive integers | ![image](https://github.com/user-attachments/assets/77f97b42-64ce-42da-bbbd-e6789c417c21) |
+| `UseTime` | The number of frames this item takes before it can be used again. | Positive integers | ![image](https://github.com/user-attachments/assets/ff08d86c-75d7-45ed-ae79-a08c97dced6e) |
 
 ### Calamity Mod (CalamityMod)
 | Change Name | Description | Acceptable Values | Example |
 | ----------- | ----------- | ----------------- | ------- |
-| `MaxCharge` | The maximum charge value of this item. | Positive decimals | IMAGE |
-| `ChargePerUse` | The amount of charge that is consumed every time the item is used. | Positive decimals | IMAGE |
-| `ChargePerAltUse` | The amount of charge that is consumed every time this item is used with right click.<br/>In most cases this does not need to be set and will default to the value of `ChargePerUse`. | Positive decimals | IMAGE |
+| `MaxCharge` | The maximum charge value of this item. | Positive decimals | ![image](https://github.com/user-attachments/assets/c3e69e05-5e1a-4013-a54e-076885c554ff) |
+| `ChargePerUse` | The amount of charge that is consumed every time the item is used. | Positive decimals | ![image](https://github.com/user-attachments/assets/e84df321-7882-4372-a62c-87c3c3164166) |
+| `ChargePerAltUse` | The amount of charge that is consumed every time this item is used with right click.<br/>In most cases this does not need to be set and will default to the value of `ChargePerUse`. | Positive decimals | ![image](https://github.com/user-attachments/assets/37cc8362-9ed8-4f7d-a044-567f6260bc17) |
 
 If there are any changes you would like to see support added for, whether it be from Vanilla or other mods, reach out to @nycro on Discord!
