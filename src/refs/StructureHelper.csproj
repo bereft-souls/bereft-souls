@@ -1,22 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <Import Project="..\..\..\tModLoader.targets"/>
-
     <PropertyGroup>
-        <LangVersion>latest</LangVersion>
-        <Nullable>enable</Nullable>
-        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-
-        <EnableDefaultItems>false</EnableDefaultItems>
+        <ModName>StructureHelper</ModName>
     </PropertyGroup>
 
-    <ItemGroup>
-        <Include Remove="**/*"/>
-        <Compile Include="StructureHelper/**/*.cs">
-            <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
-        </Compile>
-    </ItemGroup>
-
-    <Target Name="BuildMod"/>
+    <Import Project="..\common\Ref.targets"/>
 
 </Project>

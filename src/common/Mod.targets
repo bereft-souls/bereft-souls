@@ -1,11 +1,11 @@
 <Project>
 
-    <Import Condition="Exists('..\tModLoader.targets')" Project="..\tModLoader.targets"/>
-    <Import Condition="Exists('..\..\..\tModLoader.targets')" Project="..\..\..\tModLoader.targets"/>
+    <Import Project="$(MSBuildThisFileDirectory)..\..\..\tModLoader.targets"/>
 
     <PropertyGroup>
         <LangVersion>latest</LangVersion>
         <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 
     <ItemGroup>

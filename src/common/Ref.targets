@@ -1,0 +1,24 @@
+<Project>
+
+    <Import Project="$(MSBuildThisFileDirectory)..\..\..\tModLoader.targets"/>
+
+    <PropertyGroup>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+        <EnableDefaultItems>false</EnableDefaultItems>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Include Remove="**/*"/>
+        <Compile Include="$(ModName)/**/*.cs">
+            <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </Compile>
+    </ItemGroup>
+
+    <!-- Redefine as an empty target because we don't want to actually build the
+         mods. -->
+    <Target Name="BuildMod"/>
+
+</Project>

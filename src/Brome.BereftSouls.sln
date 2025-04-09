@@ -32,6 +32,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{AE8223CB-858B-45BA-AD3B-C0B1033E6CAC}"
 	ProjectSection(SolutionItems) = preProject
 		common\Mod.targets = common\Mod.targets
+		common\Ref.targets = common\Ref.targets
 	EndProjectSection
 EndProject
 Global
