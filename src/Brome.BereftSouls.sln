@@ -29,6 +29,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestBooks", "QuestBooks\Qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FargowiltasCrossmod", "refs\FargowiltasCrossmod.csproj", "{2AF2DF9C-204F-404B-9A80-19D2DDD71A17}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{AE8223CB-858B-45BA-AD3B-C0B1033E6CAC}"
+	ProjectSection(SolutionItems) = preProject
+		common\Mod.targets = common\Mod.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

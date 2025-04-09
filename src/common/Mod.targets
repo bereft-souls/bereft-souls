@@ -1,0 +1,19 @@
+<Project>
+
+    <Import Condition="Exists('..\tModLoader.targets')" Project="..\tModLoader.targets"/>
+    <Import Condition="Exists('..\..\..\tModLoader.targets')" Project="..\..\..\tModLoader.targets"/>
+
+    <PropertyGroup>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JetBrains.Annotations" Version="2024.3.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="lib\**"/>
+    </ItemGroup>
+
+</Project>
