@@ -19,7 +19,7 @@ If you really wanted to, you could also build all of your recipes from the defau
 ***
 
 ## Building and configuring your modifications
-tPackBuilder will search your mod's files for any `.projectilemod.json` files. Each of these files acts as a sort of "rule", which defines a set of changes you want to make to a given item.
+tPackBuilder will search your mod's files for any `.projectilemod.json` files. Each of these files acts as a sort of "rule", which defines a set of changes you want to make to a given projectile.
 
 You can add multiple `.projectilemod.json` files to your mod's folder and each one will be applied individually.
 
