@@ -1,0 +1,1 @@
+Makes compatible various mods for use in playthroughs through miscellaneous changes. Designed for use in The Bereft Souls modpack but meant to work alone.

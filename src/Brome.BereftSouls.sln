@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{AE8223
 		common\Ref.targets = common\Ref.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BereftCompatibility", "BereftCompatibility\BereftCompatibility.csproj", "{772CF223-B834-4F59-BB5A-D6FCDB6C22F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{2AF2DF9C-204F-404B-9A80-19D2DDD71A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AF2DF9C-204F-404B-9A80-19D2DDD71A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AF2DF9C-204F-404B-9A80-19D2DDD71A17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{772CF223-B834-4F59-BB5A-D6FCDB6C22F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{772CF223-B834-4F59-BB5A-D6FCDB6C22F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{772CF223-B834-4F59-BB5A-D6FCDB6C22F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{772CF223-B834-4F59-BB5A-D6FCDB6C22F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

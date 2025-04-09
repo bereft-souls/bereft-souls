@@ -1,0 +1,6 @@
+displayName = Bereft Compatibility
+author = The Bereft Souls Development Team
+version = 1.0.0.0
+
+weakReferences =
+modReferences =
