@@ -100,9 +100,9 @@ A full list of available changes and what value you should assign them can be fo
 ### Vanilla (Terraria)
 | Change Name | Description | Acceptable Values | Example |
 | ----------- | ----------- | ----------------- | ------- |
-| `Damage` | The damage this item deals. | Positive integers | IMAGE |
-| `Piercing` | The number of times this projectile can pierce.<br/>Set to -1 for infinite piercing. | Integers | IMAGE |
-| `Scale` | The scale of the projectile. | Positive decimals | IMAGE |
-| `HitCooldown` | The number of i-frames this projectile grants enemies upon hitting them. | Integers | IMAGE |
+| `Damage` | The damage this item deals. | Positive integers | ![image](https://github.com/user-attachments/assets/00229a9c-0f58-4061-93f6-b30f09504f20) |
+| `Piercing` | The number of times this projectile can pierce.<br/>Set to -1 for infinite piercing. | Integers | ![image](https://github.com/user-attachments/assets/fc1681cf-149b-4470-943e-4d5f4b564c8c) |
+| `Scale` | The scale of the projectile. | Positive decimals | ![image](https://github.com/user-attachments/assets/8bf9edf6-c60c-49af-9f40-7f8919a5e602) |
+| `HitCooldown` | The number of i-frames this projectile grants enemies upon hitting them. | Integers | ![image](https://github.com/user-attachments/assets/90077976-b6b4-4135-a880-566e15242d34) |
 
 If there are any changes you would like to see support added for, whether it be from Vanilla or other mods, reach out to @nycro on Discord!
