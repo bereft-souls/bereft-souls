@@ -13,11 +13,13 @@ The majority of the mod's features can be accessed and utilized through simple `
 
 Currently supported features:
 - Dynamic recipe changes
+- Recipe building via JSON
 - NPC stat changes
+- Item stat changes
+- Projectile stat changes
 
 Upcoming features:
 - NPC item drop changes
-- Item/Projectile stat changes
 - Modular quest book, designable from an in-game GUI
 
 ## Documentation
@@ -26,4 +28,7 @@ To learn how to utilize tPackBuilder to build your own modpacks, head on over to
 
 > Quick reference:
 > - [Recipe Modification](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/RecipeModification.md)
+> - [Recipe Building](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/RecipeBuilding.md)
 > - [NPC Modification](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/NPCModification.md)
+> - [Item Modification](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/ItemModification.md)
+> - [Projectile Modification](https://github.com/bereft-souls/bereft-souls/blob/master/src/PackBuilder/docs/ProjectileModification.md)
