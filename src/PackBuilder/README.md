@@ -1,4 +1,4 @@
-<img src="icon.png" align="right" width="80" height="80" />
+<img src="icon.png" align="right" width="80" height="80" /><br/>
 
 # tPackBuilder
 
