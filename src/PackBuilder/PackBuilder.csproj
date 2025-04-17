@@ -1,28 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Condition="Exists('..\tModLoader.targets')" Project="..\tModLoader.targets" />
-	<Import Condition="Exists('..\..\..\tModLoader.targets')" Project="..\..\..\tModLoader.targets" />
+    <Import Project="../common/Mod.targets"/>
 
-	<PropertyGroup>
-		<LangVersion>latest</LangVersion>
-		<Nullable>enable</Nullable>
-		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-		<GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-		<GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
-		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
-		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<PackageReference Include="JetBrains.Annotations" Version="2024.3.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\refs\CalamityMod.csproj" />
-	</ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\refs\CalamityMod.csproj"/>
+    </ItemGroup>
 
 </Project>

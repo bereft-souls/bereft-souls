@@ -1,19 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <Import Project="..\..\..\tModLoader.targets"/>
-
     <PropertyGroup>
-        <LangVersion>latest</LangVersion>
-        <Nullable>enable</Nullable>
-
-        <EnableDefaultItems>false</EnableDefaultItems>
+        <ModName>FargowiltasSouls</ModName>
     </PropertyGroup>
 
+    <Import Project="..\common\Ref.targets"/>
+
     <ItemGroup>
-        <Include Remove="**/*"/>
-        <Compile Include="FargowiltasSouls/**/*.cs">
-            <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
-        </Compile>
         <Compile Remove="FargowiltasSouls/Folders to Port/**"/>
     </ItemGroup>
 
@@ -22,7 +15,5 @@
         <ProjectReference Include="Luminance.csproj"/>
         <ProjectReference Include="StructureHelper.csproj"/>
     </ItemGroup>
-
-    <Target Name="BuildMod"/>
 
 </Project>

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ModName>FargowiltasCrossmod</ModName>
+    </PropertyGroup>
+
+    <Import Project="..\common\Ref.targets"/>
+
+    <ItemGroup>
+        <ProjectReference Include="Fargowiltas.csproj"/>
+        <ProjectReference Include="FargowiltasSouls.csproj"/>
+        <ProjectReference Include="Luminance.csproj"/>
+        <ProjectReference Include="CalamityMod.csproj"/>
+    </ItemGroup>
+
+</Project>
