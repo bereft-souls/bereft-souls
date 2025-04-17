@@ -8,6 +8,10 @@ namespace PackBuilder.Common.JsonBuilding.Recipes.Generation
 
         public int Count = 1;
 
-        public Recipe CreateRecipe() => Recipe.Create(GetItem(Item), Count);
+        public void AddTo(Recipe recipe)
+        {
+            recipe.createItem.SetDefaults(GetItem(Item), false);
+            recipe.createItem.stack = Count;
+        }
     }
 }

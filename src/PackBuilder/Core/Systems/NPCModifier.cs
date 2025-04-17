@@ -1,15 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿using Mono.Cecil.Cil;
+using MonoMod.Cil;
+using Newtonsoft.Json;
 using PackBuilder.Common.JsonBuilding.NPCs;
-using System.Collections.Generic;
 using System.Collections.Frozen;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Terraria;
 using Terraria.ModLoader;
-using Terraria.ID;
-using MonoMod.Cil;
-using Mono.Cecil.Cil;
-using System;
 
 namespace PackBuilder.Core.Systems
 {
@@ -105,7 +103,7 @@ namespace PackBuilder.Core.Systems
 
     internal class NPCModifier : ModSystem
     {
-        
+
         public override void PostSetupContent()
         {
             // Collects ALL .npcmod.json files from all mods into a list.

@@ -10,8 +10,14 @@ namespace PackBuilder.Common.JsonBuilding.NPCs
         public List<INPCChange> Changes = [];
 
         public VanillaNpcChange Terraria { set => Changes.Add(value); }
-
-        [JITWhenModsEnabled("CalamityMod")] public CalamityNPCChange CalamityMod { set => Changes.Add(value); }
+        public CalamityNPCChange CalamityMod
+        {
+            set
+            {
+                if (ModLoader.HasMod("CalamityMod"))
+                    Changes.Add(value);
+            }
+        }
 
         public void ApplyTo(NPC npc)
         {

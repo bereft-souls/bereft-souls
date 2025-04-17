@@ -1,6 +1,7 @@
 ﻿using PackBuilder.Common.JsonBuilding.Items.Changes;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.ModLoader;
 
 namespace PackBuilder.Common.JsonBuilding.Items
 {
@@ -9,6 +10,14 @@ namespace PackBuilder.Common.JsonBuilding.Items
         public List<IItemChange> Changes = [];
 
         public VanillaItemChange Terraria { set => Changes.Add(value); }
+        public CalamityItemChange CalamityMod
+        {
+            set
+            {
+                if (ModLoader.HasMod("CalamityMod"))
+                    Changes.Add(value);
+            }
+        }
 
         public void ApplyTo(Item item)
         {

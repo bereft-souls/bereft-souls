@@ -1,5 +1,4 @@
 ﻿using PackBuilder.Common.JsonBuilding.Recipes.Conditions;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Terraria;

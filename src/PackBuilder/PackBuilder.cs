@@ -1,7 +1,9 @@
 global using static PackBuilder.Core.Utils.ModUtils;
+using Mono.Reflection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
+using System.Reflection;
 using Terraria.ModLoader;
 
 namespace PackBuilder
@@ -9,7 +11,7 @@ namespace PackBuilder
     public class PackBuilder : Mod
     {
         /// <summary>
-        /// The file that is currently being de-serialized and loaded by tPackBuilder.x
+        /// The file that is currently being de-serialized and loaded by tPackBuilder.
         /// </summary>
         public static string? LoadingFile { get; set; } = null;
 
@@ -18,7 +20,21 @@ namespace PackBuilder
             get => new()
             {
                 MissingMemberHandling = MissingMemberHandling.Error,
-                Error = (object? sender, ErrorEventArgs ex) => { throw new JsonReadingException(ex.ErrorContext.Error); }
+                Error = (object? sender, ErrorEventArgs ex) =>
+                {
+                    // We change the error that is currently being thrown in order to have
+                    // a user-friendly error display message if there are errors in any .json files.
+                    if (ex.ErrorContext.Error is JsonReadingException)
+                        return;
+
+                    var error = new JsonReadingException(ex.ErrorContext.Error);
+
+                    PropertyInfo property = typeof(ErrorContext).GetProperty("Error", BindingFlags.Public | BindingFlags.Instance)!;
+                    FieldInfo field = property.GetBackingField();
+
+                    field.SetValue(ex.ErrorContext, error);
+                    throw error;
+                }
             };
         }
     }

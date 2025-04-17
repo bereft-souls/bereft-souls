@@ -1,6 +1,6 @@
 ﻿using PackBuilder.Common.JsonBuilding.Recipes.Generation;
 using System.Collections.Generic;
-using Terraria;
+using Terraria.ModLoader;
 
 namespace PackBuilder.Common.JsonBuilding.Recipes
 {
@@ -18,21 +18,22 @@ namespace PackBuilder.Common.JsonBuilding.Recipes
 
         public RecipeGroupIngredient GroupIngredient { set => Groups.Add(value); }
 
-        public void Build()
+        public void Build(Mod sourceMod)
         {
-            Recipe recipe = Result.CreateRecipe();
+            var recipe = NewRecipe(sourceMod);
+
+            Result.AddTo(recipe);
 
             foreach (var ingredient in Ingredients)
                 ingredient.AddTo(recipe);
 
-            foreach (var tile in Tiles)
-                recipe.AddTile(GetTile(tile));
-
             foreach (var group in Groups)
                 group.AddTo(recipe);
 
-            recipe.Register();
+            foreach (var tile in Tiles)
+                recipe.AddTile(GetTile(tile));
 
+            recipe.Register();
         }
     }
 }

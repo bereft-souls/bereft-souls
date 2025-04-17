@@ -5,11 +5,11 @@ using Terraria.ModLoader;
 
 namespace PackBuilder.Common.JsonBuilding.NPCs.Changes
 {
-    [JITWhenModsEnabled("CalamityMod")]
     internal class CalamityNPCChange : INPCChange
     {
         public ValueModifier DamageReduction { get; set; }
 
+        [JITWhenModsEnabled("CalamityMod")]
         public void ApplyTo(NPC npc)
         {
             var calNpc = npc.Calamity();

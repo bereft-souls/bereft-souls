@@ -1,10 +1,10 @@
 {
 	"Projectile": "Terraria/WoodenArrowFriendly",
-	
+
 	"Changes": {
 		"Terraria": {
 			"Piercing": "+1",
-			"Scale": "1.2"
+			"Scale": "x5"
 		}
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -110,5 +111,11 @@ namespace PackBuilder.Core.Utils
 
             return id;
         }
+
+        /// <summary>
+        /// Creates a recipe from the specified mod.
+        /// </summary>
+        public static Recipe NewRecipe(Mod mod) => (Recipe)recipeConstructor.Invoke([mod]);
+        private static readonly ConstructorInfo recipeConstructor = typeof(Recipe).GetConstructor(BindingFlags.NonPublic | BindingFlags.Instance, [typeof(Mod)])!;
     }
 }
