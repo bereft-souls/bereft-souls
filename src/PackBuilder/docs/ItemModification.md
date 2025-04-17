@@ -81,11 +81,13 @@ From here, we can start listing off our changes. When you want to change a value
 - Write a value prefixed with a `x`. This will multiply the already in place value by your specified amount.
 > Note that some fields expect integers to be given as values. If you use decimals in these instances, whether it be setting the value directly or by performing an operation, the resulting numbers will be rounded towards 0.
 
-![image](https://github.com/user-attachments/assets/aade5958-9308-4703-93b2-992efae0ba6f)
+![image](https://github.com/user-attachments/assets/e6df5261-057d-4109-80dc-eb9e9b4842ac)
+
+You will notice that in addition to the item's `UseTime` being set, we have also set `UseAnimation` to the same value. Typically, if you want to modify how fast a weapon can be used, you will want to modify both of these values in tandem, as leaving one or the other out can create unexpected results.
 
 If we wanted to set the item's damage to 100 (not add 100 to it, set it to exactly 100), we could do this:
 
-![image](https://github.com/user-attachments/assets/1483339c-8c1e-4e0b-8eb9-741969274958)
+![image](https://github.com/user-attachments/assets/1ba1a962-cf97-4df5-b14d-fe90d56f6c19)
 
 And just like that, we're done! If you head into the game and spawn a Terrablade, you should see it has the increased stats.
 
@@ -114,6 +116,7 @@ A full list of available changes and what value you should assign them can be fo
 | `ManaCost` | The amount of mana that this item consumes when used. | Positive integers | ![image](https://github.com/user-attachments/assets/80dc7767-0846-45cb-9653-d824b8637aa6) |
 | `ShootSpeed` | How fast the projectiles this item shoots will travel. | Positive integers | ![image](https://github.com/user-attachments/assets/77f97b42-64ce-42da-bbbd-e6789c417c21) |
 | `UseTime` | The number of frames this item takes before it can be used again. | Positive integers | ![image](https://github.com/user-attachments/assets/ff08d86c-75d7-45ed-ae79-a08c97dced6e) |
+| `UseAnimation` | The number of frames this item's use animation is active. | Positive integers | ![image](https://github.com/user-attachments/assets/0728b8b3-0768-4a85-a00c-458817764081) |
 
 ### Calamity Mod (CalamityMod)
 | Change Name | Description | Acceptable Values | Example |
