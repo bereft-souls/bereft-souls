@@ -117,5 +117,8 @@ namespace PackBuilder.Core.Utils
         /// </summary>
         public static Recipe NewRecipe(Mod mod) => (Recipe)recipeConstructor.Invoke([mod]);
         private static readonly ConstructorInfo recipeConstructor = typeof(Recipe).GetConstructor(BindingFlags.NonPublic | BindingFlags.Instance, [typeof(Mod)])!;
+
+        public static void SetDisabled(this Recipe recipe, bool disabled) => disabledProperty.SetValue(recipe, disabled);
+        private static readonly PropertyInfo disabledProperty = typeof(Recipe).GetProperty("Disabled", BindingFlags.Public | BindingFlags.Instance)!;
     }
 }

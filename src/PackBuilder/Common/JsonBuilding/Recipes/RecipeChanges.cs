@@ -31,6 +31,8 @@ internal class RecipeChanges
     public RemoveRecipeGroup RemoveRecipeGroup { set => Changes.Add(value); }
     public RemoveTile RemoveTile { set => Changes.Add(value); }
 
+    public DisableRecipe DisableRecipe { set => Changes.Add(value); }
+
     /// <summary>
     /// Applies this <see cref="RecipeChanges"/> set to a given recipe.
     /// </summary>
