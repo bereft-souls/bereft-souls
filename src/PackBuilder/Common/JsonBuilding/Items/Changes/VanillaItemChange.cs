@@ -18,6 +18,7 @@ namespace PackBuilder.Common.JsonBuilding.Items.Changes
         public ValueModifier ManaCost { get; set; }
         public ValueModifier ShootSpeed { get; set; }
         public ValueModifier UseTime { get; set; }
+        public ValueModifier UseAnimation { get; set; }
 
         public void ApplyTo(Item item)
         {
@@ -34,6 +35,7 @@ namespace PackBuilder.Common.JsonBuilding.Items.Changes
             this.ManaCost.ApplyTo(ref item.mana);
             this.ShootSpeed.ApplyTo(ref item.shootSpeed);
             this.UseTime.ApplyTo(ref item.useTime);
+            this.UseAnimation.ApplyTo(ref item.useAnimation);
         }
     }
 }

@@ -4,7 +4,8 @@
 	"Changes": {
 		"Terraria": {
 			"Damage": "+100",
-			"UseTime": "-2"
+			"UseTime": "-2",
+			"UseAnimation": "-2"
 		}
 	}
 }
