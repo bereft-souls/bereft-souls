@@ -1,9 +1,0 @@
-tPackBuilder is a mod to help you build your own modpacks!
-
-This mod aims to help aspiring modpack developers who may not be as familiar with the intricacies of C#/Terraria programming.
-
-By simply creating your own mod project, and then following the step-by-step guide on the GitHub, you can create your own modpacks with little to no programming required!
-
-Even for modpack developers who are familiar with C#, tPackBuilder contains many abstractions, tools, and resources that help you to maintain and keep your codebase as clean as possible.
-
-Check out the GitHub documentation to get started!

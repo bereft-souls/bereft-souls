@@ -1,9 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-    <Import Project="../common/Mod.targets" />
-
-    <ItemGroup>
-        <ProjectReference Include="..\refs\CalamityMod.csproj" />
-    </ItemGroup>
-
-</Project>
