@@ -1,3 +1,0 @@
-displayName = Quest Books
-author = Bereft Souls Team
-version = 0.1

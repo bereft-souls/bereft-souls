@@ -19,8 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luminance", "refs\Luminance
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructureHelper", "refs\StructureHelper.csproj", "{D70B0553-E243-4BEB-924E-9E4273876585}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestBooks", "QuestBooks\QuestBooks.csproj", "{AA36357E-3CCC-4C2F-9633-223738C4DFC0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FargowiltasCrossmod", "refs\FargowiltasCrossmod.csproj", "{2AF2DF9C-204F-404B-9A80-19D2DDD71A17}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{AE8223CB-858B-45BA-AD3B-C0B1033E6CAC}"
@@ -65,10 +63,6 @@ Global
 		{D70B0553-E243-4BEB-924E-9E4273876585}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D70B0553-E243-4BEB-924E-9E4273876585}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D70B0553-E243-4BEB-924E-9E4273876585}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AA36357E-3CCC-4C2F-9633-223738C4DFC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA36357E-3CCC-4C2F-9633-223738C4DFC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA36357E-3CCC-4C2F-9633-223738C4DFC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA36357E-3CCC-4C2F-9633-223738C4DFC0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2AF2DF9C-204F-404B-9A80-19D2DDD71A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2AF2DF9C-204F-404B-9A80-19D2DDD71A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AF2DF9C-204F-404B-9A80-19D2DDD71A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
